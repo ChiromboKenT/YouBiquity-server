@@ -11,7 +11,7 @@ console.log(process.env.PORT);
 const app: Application = express();
 
 const corsOptions = {
-  origin: process.env.CLIENT_ORIGIN || "http://localhost:3000",
+  origin: "*",
 };
 app.use(cors(corsOptions));
 app.set("trust proxy", true);
